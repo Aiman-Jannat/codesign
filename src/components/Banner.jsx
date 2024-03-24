@@ -1,4 +1,4 @@
-
+import { motion } from "framer-motion"
 
 const Banner = () => {
   return (
@@ -10,9 +10,23 @@ const Banner = () => {
         <div className=" absolute inset-0 bg-black opacity-30"></div>
         <div className="hero-content text-center w-full text-neutral-content">
           <div className="">
-            <h1 className="mb-5 text-4xl w-full text-white font-bold">Your local source of high quality images
+            <motion.h1
+            initial={{scale:0}}
+            animate={{
+              x: 0,
+              y: 0,
+              scale: 0.9,
+              rotate: 0,
+            }}
+             transition={{
+              duration: 1,
+              delay:0.8
+             }}
+             
+            
+            className="mb-5 text-4xl w-full text-white font-bold">Your local source of high quality images
               <br /> and videos directly from their creators
-            </h1>
+            </motion.h1>
             <div className=" flex h-16 justify-center w-full  ">
 
 
